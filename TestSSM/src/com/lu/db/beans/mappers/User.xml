@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lu.db.beans.User">
+	
+	<select id="selectUser" resultType="com.lu.db.beans.User">
+		select * from User where id = #{id}
+  	</select>
+	<select id="selectUserByName" resultType="com.lu.db.beans.User">
+		select * from User where username = #{name}
+  	</select>
+	<select id="selectUserLikeName" resultType="com.lu.db.beans.User">
+	select * from User where username like #{name}
+  	</select>
+	<select id="selectUserNameAndSex" resultType="com.lu.db.beans.User">
+		select * from User where username = #{name} and sex=#{sex}
+  	</select>
+  	<insert id="saveUser" parameterType="com.lu.db.beans.User" useGeneratedKeys="true" keyProperty="id" >
+  		insert into User (username,password,page,sex) values (#{username},#{password},#{page},#{sex})
+  	</insert>
+  	
+  	
+
+</mapper>

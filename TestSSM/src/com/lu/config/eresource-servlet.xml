@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" 
+	xmlns:util="http://www.springframework.org/schema/util"
+	
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd ">
+	<!-- 扫描web包，应用Spring的注解 -->
+	<context:property-placeholder location="classpath:com/lu/config/jdbc.properties"/>
+	<bean id="resourceRoot" class="com.lu.version.ResourceRoot"  scope="singleton" >
+		<constructor-arg index="0" value="${myapp_version}"></constructor-arg>
+	</bean>
+	<!-- 静态资源映射-->
+	<mvc:resources location="/photo/" mapping="/photo/**" cache-period="31536000" order="0" /> 
+	<mvc:resources location="/" mapping="/**" cache-period="31536000" order="1" /> 
+	<mvc:annotation-driven/>
+</beans>
