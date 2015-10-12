@@ -1,4 +1,4 @@
-package com.lu.db.dao;
+package com.luqili.db.dao;
 
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 

@@ -1,4 +1,4 @@
-package com.lu.db.beans;
+package com.luqili.db.beans;
 
 public class User {
 	private Integer id;

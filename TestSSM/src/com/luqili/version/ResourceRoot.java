@@ -1,4 +1,4 @@
-package com.lu.version;
+package com.luqili.version;
 
 public class ResourceRoot   {
 	private String version;

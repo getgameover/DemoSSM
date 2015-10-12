@@ -11,8 +11,8 @@
        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd
         http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd ">
 	<!-- 扫描web包，应用Spring的注解 -->
-	<context:property-placeholder location="classpath:com/lu/config/jdbc.properties"/>
-	<bean id="resourceRoot" class="com.lu.version.ResourceRoot"  scope="singleton" >
+	<context:property-placeholder location="classpath:com/luqili/config/jdbc.properties"/>
+	<bean id="resourceRoot" class="com.luqili.version.ResourceRoot"  scope="singleton" >
 		<constructor-arg index="0" value="${myapp_version}"></constructor-arg>
 	</bean>
 	<!-- 静态资源映射-->

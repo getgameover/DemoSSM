@@ -8,7 +8,7 @@
        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd
         http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd ">
 	<!-- 扫描web包，应用Spring的注解 -->
-	<context:component-scan base-package="com.lu.action" />
+	<context:component-scan base-package="com.luqili.action" />
 	<mvc:annotation-driven>
 		<mvc:message-converters>
 			<bean class="org.springframework.http.converter.StringHttpMessageConverter">

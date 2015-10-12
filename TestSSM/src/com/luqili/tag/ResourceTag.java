@@ -1,4 +1,4 @@
-package com.lu.tag;
+package com.luqili.tag;
 
 import java.io.IOException;
 
@@ -7,7 +7,7 @@ import javax.servlet.jsp.tagext.TagSupport;
 
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
-import com.lu.version.ResourceRoot;
+import com.luqili.version.ResourceRoot;
 
 public class ResourceTag extends TagSupport {
 	private static final long serialVersionUID = 1L;

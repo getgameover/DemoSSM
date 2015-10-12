@@ -1,12 +1,12 @@
-package com.lu.service.impl;
+package com.luqili.service.impl;
 
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.lu.db.beans.User;
-import com.lu.db.dao.UserDao;
-import com.lu.service.UserService;
+import com.luqili.db.beans.User;
+import com.luqili.db.dao.UserDao;
+import com.luqili.service.UserService;
 @Service(value="userService")
 public class UserServiceImpl implements UserService {
 	@Resource(name="userDao")

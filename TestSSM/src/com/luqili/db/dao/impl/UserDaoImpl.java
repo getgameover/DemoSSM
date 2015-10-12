@@ -1,4 +1,4 @@
-package com.lu.db.dao.impl;
+package com.luqili.db.dao.impl;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -7,9 +7,9 @@ import java.util.List;
 import org.apache.ibatis.jdbc.SQL;
 import org.springframework.stereotype.Repository;
 
-import com.lu.db.beans.User;
-import com.lu.db.dao.DaoSupport;
-import com.lu.db.dao.UserDao;
+import com.luqili.db.beans.User;
+import com.luqili.db.dao.DaoSupport;
+import com.luqili.db.dao.UserDao;
 @Repository(value="userDao")
 public class UserDaoImpl extends DaoSupport implements UserDao{
 	

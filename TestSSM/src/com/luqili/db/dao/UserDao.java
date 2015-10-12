@@ -1,8 +1,8 @@
-package com.lu.db.dao;
+package com.luqili.db.dao;
 
 import java.util.List;
 
-import com.lu.db.beans.User;
+import com.luqili.db.beans.User;
 public interface UserDao {
 	public User getUserById(Integer id );
 	public User getUserByName(String name );

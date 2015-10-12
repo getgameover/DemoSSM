@@ -1,4 +1,4 @@
-package com.lu.db.factory;
+package com.luqili.db.factory;
 
 public class TestFactory {
 	public static void main(String[]args){

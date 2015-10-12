@@ -1,4 +1,4 @@
-package com.lu.action;
+package com.luqili.action;
 
 import javax.annotation.Resource;
 
@@ -8,10 +8,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.lu.db.beans.User;
-import com.lu.db.dao.UserDao;
-import com.lu.db.dao.impl.UserDaoImpl;
-import com.lu.service.UserService;
+import com.luqili.db.beans.User;
+import com.luqili.db.dao.UserDao;
+import com.luqili.db.dao.impl.UserDaoImpl;
+import com.luqili.service.UserService;
 
 @Controller
 public class Index {

@@ -1,4 +1,4 @@
-package com.lu.db.base;
+package com.luqili.db.base;
 
 import javax.annotation.Resource;
 

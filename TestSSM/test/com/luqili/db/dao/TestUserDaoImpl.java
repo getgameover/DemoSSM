@@ -1,11 +1,11 @@
-package com.lu.db.dao;
+package com.luqili.db.dao;
 
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.lu.db.base.TestSpringBase;
-import com.lu.db.beans.User;
-import com.lu.db.dao.impl.UserDaoImpl;
+import com.luqili.db.base.TestSpringBase;
+import com.luqili.db.beans.User;
+import com.luqili.db.dao.impl.UserDaoImpl;
 
 public class TestUserDaoImpl extends TestSpringBase {
 	@Autowired

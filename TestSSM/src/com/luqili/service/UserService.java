@@ -1,6 +1,6 @@
-package com.lu.service;
+package com.luqili.service;
 
-import com.lu.db.beans.User;
+import com.luqili.db.beans.User;
 
 public interface UserService {
 	public User saveUser(String username,String password,Integer age,Character sex);
