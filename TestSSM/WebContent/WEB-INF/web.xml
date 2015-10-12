@@ -7,7 +7,7 @@
 	</session-config>
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:com/lu/config/applicationContext.xml</param-value>
+		<param-value>classpath:com/luqili/config/applicationContext.xml</param-value>
 	</context-param>
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
@@ -17,7 +17,7 @@
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>classpath:com/lu/config/eaction-servlet.xml</param-value>
+			<param-value>classpath:com/luqili/config/eaction-servlet.xml</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>

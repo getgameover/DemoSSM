@@ -11,7 +11,7 @@
 	<tag>
 		<description>静态资源</description>
 		<name>resource</name>
-		<tag-class>com.lu.tag.ResourceTag</tag-class>
+		<tag-class>com.luqili.tag.ResourceTag</tag-class>
 		<body-content>JSP</body-content>
 		<attribute>
 			<description>资源绝对路径：</description>

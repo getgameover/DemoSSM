@@ -25,6 +25,13 @@ public class Index {
 		mv.setViewName("/index/index");
 		return mv;
 	}
+	
+	@RequestMapping(value = "/bootstarp")
+	public ModelAndView BootStarp() {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("/index/demo");
+		return mv;
+	}
 
 	@RequestMapping(value = "/saveuser")
 	public ModelAndView saveUser(String username, String password, Integer age, String sex) {
