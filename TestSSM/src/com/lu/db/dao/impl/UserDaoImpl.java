@@ -35,7 +35,6 @@ public class UserDaoImpl extends DaoSupport implements UserDao{
 			FROM("User u");
 			WHERE("u.page=?");
 		}}.toString();
-		System.out.println(sql);
 		
 		return getSqlSession().selectOne(sql, age);
 	}
