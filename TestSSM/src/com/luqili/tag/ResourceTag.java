@@ -34,7 +34,7 @@ public class ResourceTag extends TagSupport {
 	}
 	private String getContextPath(){
 		//return GgoConfig.ImageUrl+pageContext.getRequest().getServletContext().getContextPath();
-		return pageContext.getRequest().getServletContext().getContextPath();
+		return pageContext.getServletContext().getContextPath();
 	}
 	private String getResourceRoot(){
 		ResourceRoot resourcePath=WebApplicationContextUtils.getWebApplicationContext(pageContext.getServletContext()).getBean(ResourceRoot.class);
