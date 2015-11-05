@@ -11,7 +11,7 @@ import com.luqili.db.dao.UserDao;
 import com.luqili.service.UserService;
 @Service(value="userService")
 public class UserServiceImpl implements UserService {
-	@Autowired
+	@Resource
 	private UserMappers userMappers;
 	
 	@Override
@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserService {
 		u.setPassword(password);
 		u.setPage(age);
 		u.setSex(sex);
-		Integer c=userMappers.insertUser(u);
+		Integer c=userMappers.saveUser(u);
 		if(c==1){//保存成功
 			return u;
 		}
@@ -33,7 +33,7 @@ public class UserServiceImpl implements UserService {
 		if(id==null){
 			return null;
 		}
-		User u=userMappers.getUserById(id);
+		User u=userMappers.selectUser(id);
 		return u;
 	}
 
