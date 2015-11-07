@@ -24,8 +24,8 @@
 	<!-- MyBatis整合 -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="mapperLocations" value="classpath*:com/lu/db/beans/mappers/*.xml" />
-		<!-- <property name="configLocation" value="WEB-INF/conf/mybatis.xml" /> -->
+		<property name="mapperLocations" value="classpath*:com/luqili/db/beans/mappers/*.xml" />
+		<property name="configLocation" value="classpath:com/luqili/config/mybatis.xml" />
 	</bean>
 
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
@@ -48,12 +48,13 @@
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
+	<!-- 
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg ref="sqlSessionFactory"></constructor-arg>
 	</bean>
-		
+	-->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.luqili.db.beans.mappers" />
+		<property name="basePackage" value="com.luqili.db.dao" />
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
 	</bean>
 	
