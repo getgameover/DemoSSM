@@ -41,7 +41,7 @@
 		<tbody>
 		<tr><th>UserName:</th><td><input name="username" type="text"></td></tr>
 		<tr><th>PassWord:</th><td><input name="password" type="password"></td></tr>
-		<tr><th>Page:</th><td><input name="page" type="number"></td></tr>
+		<tr><th>Page:</th><td><input name="age" type="number"></td></tr>
 		<tr><th>sex:</th><td><select name="sex"><option value="男">男</option><option value="女">女</option></select> </td></tr>
 		<tr><th></th><td><input type="submit" value="提交"></td></tr>
 		</tbody>

@@ -1,11 +1,15 @@
 package com.luqili.action;
 
 import javax.annotation.Resource;
+import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.luqili.action.form.FormUser;
 import com.luqili.db.beans.User;
 import com.luqili.service.UserService;
 
@@ -30,15 +34,29 @@ public class Index {
 	}
 
 	@RequestMapping(value = "/saveuser")
-	public ModelAndView saveUser(String username, String password, Integer age, String sex) {
-		User u = userService.saveUser(username, password, age, sex.charAt(0));
+	public ModelAndView saveUser(@Valid FormUser formuser,BindingResult result) {
+		ModelAndView mv = new ModelAndView();
+		if(result.hasErrors()){
+			String msg = "";
+			for(ObjectError error:result.getAllErrors()){
+				//System.out.println(error.getDefaultMessage());
+				msg+=error.getDefaultMessage();
+			}
+			mv.addObject("msg", msg);
+			mv.setViewName("/index/msg");
+			return mv;
+		}
+		
+		User u = userService.saveUser(formuser.getUsername(), formuser.getPassword(), formuser.getAge(),formuser.getSex().charAt(0));
+		
+		
 		String msg = null;
 		if (u == null) {
 			msg = "用户信息保存失败";
 		} else {
 			msg = "用户信息保存成功,user=" + u;
 		}
-		ModelAndView mv = new ModelAndView();
+		
 		mv.addObject("msg", msg);
 		mv.setViewName("/index/msg");
 		return mv;
