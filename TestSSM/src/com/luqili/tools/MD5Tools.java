@@ -32,10 +32,12 @@ public class MD5Tools {
     }
 
     public static void main(String[] s) {
-        String str = "1";
-        System.out.println(str + "[" + MD5Tools.MD5(str) + "]");
-        System.out.println(str + "[" + MD5Tools.MD5(str) + "]");
-        System.out.println(str + "[" + MD5Tools.MD5(str) + "]");
+        String str = "admin";
+        String m=MD5Tools.MD5(str);
+        System.out.println(m);
+        System.out.println(m.length());
+        //21232F297A57A5A743894A0E4A801FC3
+        //D033E22AE348AEB5660FC2140AEC35850C4DA997
     }
 
 }
