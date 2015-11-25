@@ -6,11 +6,13 @@ import java.util.List;
 
 import org.apache.ibatis.jdbc.SQL;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.luqili.db.beans.User;
 import com.luqili.db.dao.DaoSupport;
 import com.luqili.db.dao.UserDao;
 @Repository(value="userDao")
+@Transactional
 public class UserDaoImpl extends DaoSupport implements UserDao{
 	
 	@Override
